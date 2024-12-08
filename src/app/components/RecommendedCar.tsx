@@ -7,7 +7,7 @@ export const RecommendedCar: React.FC = () => {
     {
       name: "Tesla Model 3",
       type: "Electric",
-      image: "/images/car(13).jpg",
+      image: "/images/Car(13).jpg",
       fuelCapacity: "100 kWh",
       transmission: "Automatic",
       capacity: "5 seats",
@@ -17,7 +17,7 @@ export const RecommendedCar: React.FC = () => {
     {
       name: "Ford Mustang",
       type: "Gasoline",
-      image: "/images/car(14).jpg",
+      image: "/images/Car(14).jpg",
       fuelCapacity: "60 L",
       transmission: "Manual",
       capacity: "4 seats",
@@ -27,7 +27,7 @@ export const RecommendedCar: React.FC = () => {
     {
       name: "BMW X5",
       type: "Diesel",
-      image: "/images/car(15).jpg",
+      image: "/images/Car(15).jpg",
       fuelCapacity: "70 L",
       transmission: "Automatic",
       capacity: "7 seats",
@@ -37,7 +37,7 @@ export const RecommendedCar: React.FC = () => {
     {
       name: "Audi A6",
       type: "Hybrid",
-      image: "/images/car(16).jpg",
+      image: "/images/Car(16).jpg",
       fuelCapacity: "50 L",
       transmission: "Automatic",
       capacity: "5 seats",
@@ -47,7 +47,7 @@ export const RecommendedCar: React.FC = () => {
     {
       name: "Mercedes-Benz C-Class",
       type: "Gasoline",
-      image: "/images/car(17).jpg",
+      image: "/images/Car(17).jpg",
       fuelCapacity: "65 L",
       transmission: "Automatic",
       capacity: "5 seats",
@@ -57,7 +57,7 @@ export const RecommendedCar: React.FC = () => {
     {
       name: "Porsche 911",
       type: "Gasoline",
-      image: "/images/car(18).jpg",
+      image: "/images/Car(18).jpg",
       fuelCapacity: "60 L",
       transmission: "Manual",
       capacity: "4 seats",
@@ -67,7 +67,7 @@ export const RecommendedCar: React.FC = () => {
     {
       name: "Chevrolet Camaro",
       type: "Gasoline",
-      image: "/images/car(19).jpg",
+      image: "/images/Car(19).jpg",
       fuelCapacity: "70 L",
       transmission: "Manual",
       capacity: "4 seats",
@@ -77,7 +77,7 @@ export const RecommendedCar: React.FC = () => {
     {
       name: "Nissan Altima",
       type: "Hybrid",
-      image: "/images/car(20).jpg",
+      image: "/images/Car(20).jpg",
       fuelCapacity: "50 L",
       transmission: "Automatic",
       capacity: "5 seats",
@@ -89,7 +89,7 @@ export const RecommendedCar: React.FC = () => {
   return (
     <div className="p-6 bg-gray-100 md:p-10">
       {/* Section Header */}
-      <h2 className="text-lg font-semibold text-slate-900 text-left mb-8 md:text-xl">
+      <h2 className="text-lg font-semibold text-slate-500 text-left mb-8 md:text-xl">
         Recommended Car
       </h2>
 
