@@ -15,8 +15,8 @@ const circles = [
 
 // Card with Aspect Ratio and Gradient Background (Left Card)
 const GradientCard = () => (
-  <Card className="w-[640px] h-[360px] mx-5 my-10 bg-blue-500 border-none relative">
-    <CardContent className="relative w-[775px] h-[775px] -top-[83px] -left-[157px] p-0">
+  <Card className="w-[320px] h-[180px] sm:w-[640px] sm:h-[360px] mx-auto my-5 sm:mx-5 sm:my-10 bg-blue-500 border-none relative overflow-hidden">
+    <CardContent className="relative w-[387.5px] h-[387.5px] sm:w-[775px] sm:h-[775px] -top-[41.5px] sm:-top-[83px] -left-[78.5px] sm:-left-[157px] p-0 scale-50 sm:scale-100 origin-top-left">
       <div className="relative w-[795px] h-[795px] -top-2.5 -left-2.5">
         {circles.map((circle, index) => (
           <div
@@ -63,8 +63,8 @@ const CustomCard = () => {
   `);
 
   return (
-    <Card className="w-[640px] h-[360px] mx-5 my-10 bg-blue-500 relative border-none">
-      <CardContent className="relative w-[775px] h-[775px] -top-[83px] -left-[157px] p-0">
+    <Card className="w-[320px] h-[180px] sm:w-[640px] sm:h-[360px] mx-auto my-5 sm:mx-5 sm:my-10 bg-blue-500 relative border-none overflow-hidden">
+      <CardContent className="relative w-[387.5px] h-[387.5px] sm:w-[775px] sm:h-[775px] -top-[41.5px] sm:-top-[83px] -left-[78.5px] sm:-left-[157px] p-0 scale-50 sm:scale-100 origin-top-left">
         {/* SVG Gradient Background repeated */}
         <div
           className="absolute inset-0"
@@ -111,13 +111,12 @@ const CustomCard = () => {
 // Main Component to Render Both Cards
 export default function Ads(): JSX.Element {
   return (
-    <div className="flex justify-center gap-0.5">
+    <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-4 p-4">
       {/* Left Card with Gradient */}
       <GradientCard />
       {/* Right Customizable Card with SVG Gradient */}
       <CustomCard />
     </div>
-
-    
   );
 }
+
