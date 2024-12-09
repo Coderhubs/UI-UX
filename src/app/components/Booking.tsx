@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Card, CardContent } from "../components/ui/card";
 import { Separator } from "../components/ui/Separator";
-import { ArrowDownUp } from "lucide-react";
+import { ArrowDownUp } from 'lucide-react';
 
 // Define sections with options for Select dropdowns
 const sections = [
@@ -26,13 +26,13 @@ const PickUp = () => {
   };
 
   return (
-    <div className="inline-flex items-start gap-6">
+    <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 w-full">
       {sections.map((section, index) => (
         <React.Fragment key={section.label}>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 w-full sm:w-auto">
             <div className="font-bold text-base text-secondary-500">{section.label}</div>
             <select
-              className="p-2 border border-secondary-300 rounded-md text-secondary-500 text-sm"
+              className="p-2 border border-secondary-300 rounded-md text-secondary-500 text-sm w-full"
               value={
                 section.label === "Locations" ? selectedCity :
                 section.label === "Date" ? selectedDate :
@@ -50,7 +50,9 @@ const PickUp = () => {
               ))}
             </select>
           </div>
-          {index < sections.length - 1 && <Separator className="h-12 w-[1px] bg-secondary-300" />}
+          {index < sections.length - 1 && (
+            <Separator className="hidden sm:block h-12 w-[1px] bg-secondary-300" />
+          )}
         </React.Fragment>
       ))}
     </div>
@@ -60,10 +62,10 @@ const PickUp = () => {
 // Booking component to structure the layout with left (Pick-Up) and right (Drop-Off) cards
 const Booking = () => {
   return (
-    <div className="flex items-center justify-center gap-6">
+    <div className="flex flex-col lg:flex-row items-center justify-center gap-6 p-4">
       {/* Left Card for 'Pick-Up' */}
-      <Card className="w-[582px] h-[136px] bg-white rounded-[10px] shadow-md">
-        <CardContent className="p-4 h-full flex flex-col justify-center items-start gap-4">
+      <Card className="w-full lg:w-[582px] bg-white rounded-[10px] shadow-md">
+        <CardContent className="p-4 flex flex-col justify-center items-start gap-4">
           <div className="flex items-center gap-3 w-full">
             {/* Circle Icon on the left */}
             <div className="w-4 h-4 bg-blue-600 rounded-full flex"></div>
@@ -80,8 +82,8 @@ const Booking = () => {
       </button>
 
       {/* Right Card for 'Drop-Off' */}
-      <Card className="w-[582px] h-[136px] bg-white rounded-[10px] shadow-md">
-        <CardContent className="p-4 h-full flex flex-col justify-center items-start gap-4">
+      <Card className="w-full lg:w-[582px] bg-white rounded-[10px] shadow-md">
+        <CardContent className="p-4 flex flex-col justify-center items-start gap-4">
           <div className="flex items-center gap-3 w-full">
             {/* Circle Icon on the left */}
             <div className="w-4 h-4 bg-blue-600 rounded-full flex"></div>
@@ -96,3 +98,4 @@ const Booking = () => {
 };
 
 export default Booking;
+
